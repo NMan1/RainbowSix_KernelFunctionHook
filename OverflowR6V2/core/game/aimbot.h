@@ -83,7 +83,7 @@ namespace game
 				angle.z = 0.f;
 			};
 
-			auto angle = vec3_t(x, y, 0.f);
+			auto angle = vec3_t(x, y, 60.f);
 			clamp(angle);
 
 			return angle;
@@ -91,7 +91,7 @@ namespace game
 
 		auto aim_angle = calc_angle(source_head, entity_head);
 
-		auto calc_fov = [](vec3_t src, vec3_t aim)
+		auto calc_fov = [90](vec3_t src, vec3_t aim)
 		{
 			aim -= src;
 
